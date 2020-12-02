@@ -13,6 +13,9 @@ public class End2End {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.spicejet.com/"); // Open URL
 
+        //Selecting the radio button for 'One Way'
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
+
 //        End to end Automation using all UI Elements with Selenium
         //Handle Dynamic Dropdowns
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1")).click();
@@ -32,13 +35,13 @@ public class End2End {
         if (driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
 
         {
-            System.out.println("Its enabled");
-            //Fail the Scrip
-            Assert.assertTrue(false);
+            System.out.println("Its Disabled");
+            Assert.assertTrue(true);
         }
         else
         {
-            Assert.assertTrue(true);
+            //Fail the Scrip
+            Assert.assertTrue(false);
         }
         Thread.sleep(2000L);
 

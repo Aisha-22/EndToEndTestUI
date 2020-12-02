@@ -9,3 +9,5 @@ To select from a list using ParentChild xpath after the space you need to use a 
 ParentChild Syntax: 
 //tagName[@attribute='vale'] /tagName[@attribute='value']
 //*[@id='ctl00_mainContent_ddl_destinationStation1'] /option[@value='KQH']
+
+The other challenge faced was the Validating if UI Elements are disabled or enabled with Attributes
